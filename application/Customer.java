@@ -10,11 +10,12 @@ public class Customer {
 	private String AddressInfo;
 	
 	//Constructor for normal creation
-	public Customer(String PhoneNumber, String CustomerName, String Address, String ChargeAccount){
+	public Customer(String PhoneNumber, String CustomerName, String Address, String ChargeAccount, String AddressInfo){
 		this.PhoneNumber = PhoneNumber;
 		this.CustomerName = CustomerName;
 		this.Address = Address;
 		this.ChargeAccount = ChargeAccount;
+		this.AddressInfo = AddressInfo;
 	}
 	
 	//Constructor for Database input creation
