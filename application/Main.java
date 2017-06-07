@@ -37,27 +37,27 @@ public class Main extends Application {
 		s.setScene(scene);
 		s.show();
 	}
-	//Scene 0 variables
+	//Scene 1 variables
 	private Button loadData = new Button("Select Database");
-	private Button Scene1_Button = new Button("Next Step");
+	private Button Scene2_Button = new Button("Next Step");
 	private File data; //Will be in the form of a .csv file
 	private Text Message = new Text();
 	private ArrayList<Customer> CustomerList = new ArrayList<Customer>();
 	
 	//Scene for loading Customer Database
-	private Scene loadScene0(Stage s){
+	private Scene loadScene1(Stage s){
 		Message.setText("");
 		loadData.setOnAction(e -> {
 			data = new FileChooser().showOpenDialog(s);
 			loadDatabase();
 		});
-		Scene1_Button.setOnAction(e -> {
+		Scene2_Button.setOnAction(e -> {
 			CurrentScene = 1;
 			changeScene(s);
 		});
 		BorderPane root = new BorderPane();
 		root.setCenter(loadData);
-		root.setRight(Scene1_Button);
+		root.setRight(Scene2_Button);
 		root.setBottom(Message);
 		return new Scene(root, 200, 200);
 	}
@@ -79,7 +79,7 @@ public class Main extends Application {
 	}
 	
 	//Unimplemented right now, will change scene to New/Old Customer scene
-	private Scene loadScene1(Stage s){
+	private Scene loadScene0(Stage s){
 		Message.setText("");
 		Pane p = new Pane();
 		return new Scene(p, 100, 100);
