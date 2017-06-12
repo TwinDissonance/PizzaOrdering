@@ -208,8 +208,8 @@ public class Main extends Application {
 		WindowMessage.setText("Please enter your customer information.");
 		BorderPane bp = new BorderPane();
 		bp.setTop(WindowMessage);
-		GridPane gp = new GridPane();
-		bp.setCenter(gp);
+		VBox vb = new VBox(CustomerPhone_2, CustomerName_2, CustomerAddress_2, CustomerAccountType_2, CustomerAddressInfo_2);
+		bp.setCenter(vb);
 		//Text Field Setup
 		bp.setBottom(Submit_22);
 		Scene Scene_2 = new Scene(bp);
@@ -219,12 +219,10 @@ public class Main extends Application {
 	
 	//Old Customer Window
 	private void Window3(Stage w){
-		WindowMessage.setText("Please enter your customer information.");
+		WindowMessage.setText("Please enter your Phone Number.");
 		BorderPane bp = new BorderPane();
 		bp.setTop(WindowMessage);
-		GridPane gp = new GridPane();
-		bp.setCenter(gp);
-		//Text Field Setup
+		bp.setCenter(CustomerPhone_2);
 		bp.setBottom(Submit_23);
 		Scene Scene_2 = new Scene(bp);
 		w.setScene(Scene_2);
